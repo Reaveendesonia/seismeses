@@ -1,0 +1,1801 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Reaveen & Yulla Sheynilla — A Nossa História</title>
+
+  <meta name="description" content="Uma história de amor, cumplicidade e memórias. Reaveen e Yulla Sheynilla celebram seis meses juntos.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #34495E;
+      --light: #E4F1FE;
+      --white: #FFFFFF;
+      --background: #F7FAFD;
+      --text: #34495E;
+      --muted: #738397;
+      --border: #D8E5F2;
+      --shadow: 0 18px 55px rgba(52, 73, 94, 0.10);
+      --shadow-hover: 0 25px 60px rgba(52, 73, 94, 0.18);
+      --radius: 22px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--background);
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    body, button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 105px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      text-align: center;
+      margin: 0 auto 55px;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--primary);
+      background: var(--light);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+    }
+
+    .section-label::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.3rem, 5vw, 3.8rem);
+      line-height: 1.2;
+      font-weight: 600;
+      margin: 22px 0 16px;
+      letter-spacing: -1px;
+    }
+
+    .section-heading p {
+      max-width: 570px;
+      margin: auto;
+      color: var(--muted);
+    }
+
+    /* NAVBAR */
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(52, 73, 94, 0.08);
+    }
+
+    .navbar {
+      min-height: 84px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.3;
+    }
+
+    .brand-name {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .brand-subtitle {
+      font-size: 0.65rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+
+    .nav-links a {
+      font-size: 0.86rem;
+      font-weight: 600;
+      position: relative;
+      transition: color 0.25s;
+    }
+
+    .nav-links a:not(.nav-cta)::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: -7px;
+      background: var(--primary);
+      transition: width 0.25s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-links a:hover {
+      color: #182C40;
+    }
+
+    .nav-links .nav-cta {
+      color: white;
+      background: var(--primary);
+      padding: 12px 19px;
+      border-radius: 10px;
+      box-shadow: 0 7px 18px rgba(52, 73, 94, 0.18);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(52, 73, 94, 0.25);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      background: var(--light);
+      color: var(--primary);
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1.4rem;
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      min-height: 710px;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(ellipse at 85% 15%, rgba(228, 241, 254, 0.85), transparent 37%),
+        linear-gradient(135deg, #E4F1FE 0%, #F8FBFF 55%, #FFFFFF 100%);
+      overflow: hidden;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(52, 73, 94, 0.12);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 460px;
+      height: 460px;
+      right: -120px;
+      top: 40px;
+    }
+
+    .hero::after {
+      width: 340px;
+      height: 340px;
+      right: -60px;
+      top: 100px;
+    }
+
+    .hero-decoration {
+      position: absolute;
+      right: 11%;
+      top: 23%;
+      color: rgba(52, 73, 94, 0.13);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 12rem;
+      line-height: 1;
+      transform: rotate(-12deg);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 770px;
+      padding: 105px 0;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .hero-kicker span {
+      width: 35px;
+      height: 1px;
+      background: var(--primary);
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--primary);
+      font-size: clamp(3.4rem, 8vw, 6.6rem);
+      line-height: 1.04;
+      letter-spacing: -2.5px;
+      font-weight: 600;
+    }
+
+    .hero h1 em {
+      font-weight: 500;
+    }
+
+    .hero-description {
+      max-width: 560px;
+      color: #607286;
+      font-size: 1.06rem;
+      margin: 27px 0 34px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .btn {
+      min-height: 55px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      border: 1px solid var(--primary);
+      box-shadow: 0 10px 24px rgba(52, 73, 94, 0.22);
+    }
+
+    .btn-primary:hover {
+      background: #26394C;
+      transform: translateY(-3px);
+      box-shadow: 0 16px 30px rgba(52, 73, 94, 0.28);
+    }
+
+    .btn-secondary {
+      color: var(--primary);
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid #C6D9EC;
+    }
+
+    .btn-secondary:hover {
+      background: var(--light);
+      transform: translateY(-3px);
+    }
+
+    .hero-note {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 42px;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .hero-note span {
+      display: inline-flex;
+      width: 32px;
+      height: 32px;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      color: var(--primary);
+    }
+
+    /* INTRODUÇÃO */
+
+    .intro {
+      background: white;
+      text-align: center;
+    }
+
+    .intro-inner {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .intro-mark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      color: var(--primary);
+      font-size: 1.7rem;
+      margin-bottom: 23px;
+    }
+
+    .intro-mark::before,
+    .intro-mark::after {
+      content: "";
+      width: 55px;
+      height: 1px;
+      background: #B8CBDD;
+    }
+
+    .intro h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      line-height: 1.25;
+      margin-bottom: 23px;
+    }
+
+    .intro p {
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    /* CONTADOR */
+
+    .counter-section {
+      background: var(--light);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .counter-section .section-heading p {
+      color: #62778C;
+    }
+
+    .counter-card {
+      max-width: 940px;
+      margin: auto;
+      padding: clamp(25px, 5vw, 55px);
+      color: white;
+      background: var(--primary);
+      border-radius: 28px;
+      box-shadow: 0 28px 65px rgba(52, 73, 94, 0.23);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .counter-card::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      right: -100px;
+      top: -130px;
+      border: 1px solid rgba(228, 241, 254, 0.18);
+      border-radius: 50%;
+    }
+
+    .counter-card::after {
+      content: "";
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      right: -60px;
+      top: -90px;
+      border: 1px solid rgba(228, 241, 254, 0.18);
+      border-radius: 50%;
+    }
+
+    .counter-card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .counter-caption {
+      color: #D7E9FA;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .counter-main {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 13px;
+      margin: 10px 0 38px;
+    }
+
+    .counter-plus {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 3rem;
+      color: #D6E8F9;
+    }
+
+    .counter-number {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(5rem, 11vw, 8rem);
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .counter-months {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-style: italic;
+      color: #D6E8F9;
+    }
+
+    .counter-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .counter-item {
+      min-width: 0;
+      text-align: center;
+      padding: 22px 8px;
+      border: 1px solid rgba(228, 241, 254, 0.2);
+      background: rgba(228, 241, 254, 0.09);
+      border-radius: 15px;
+    }
+
+    .counter-item strong {
+      display: block;
+      color: white;
+      font-size: clamp(1.1rem, 2.7vw, 1.85rem);
+      line-height: 1.4;
+      overflow-wrap: anywhere;
+    }
+
+    .counter-item span {
+      display: block;
+      color: #D6E8F9;
+      font-size: 0.75rem;
+      margin-top: 7px;
+    }
+
+    .counter-message {
+      text-align: center;
+      color: #E4F1FE;
+      margin-top: 30px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-style: italic;
+      font-size: 1.15rem;
+    }
+
+    /* HISTÓRIA — SEM FOTOGRAFIAS */
+
+    .story-section {
+      background: white;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      bottom: 15px;
+      left: 29px;
+      width: 2px;
+      background: linear-gradient(to bottom, #34495E, #C8DCEC);
+    }
+
+    .timeline-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: 60px minmax(0, 1fr);
+      gap: 23px;
+      margin-bottom: 28px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-marker {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border: 5px solid white;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      font-size: 1.15rem;
+      box-shadow: 0 0 0 1px #D7E5F2;
+    }
+
+    .timeline-card {
+      padding: 29px 32px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: linear-gradient(135deg, white, #F8FBFF);
+      box-shadow: 0 9px 30px rgba(52, 73, 94, 0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .timeline-card:hover {
+      transform: translateX(5px);
+      box-shadow: var(--shadow);
+    }
+
+    .timeline-date {
+      color: #71869B;
+      font-size: 0.76rem;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .timeline-card h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.65rem;
+      margin: 7px 0 11px;
+    }
+
+    .timeline-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .timeline-quote {
+      margin-top: 15px;
+      padding: 12px 16px;
+      border-left: 3px solid var(--primary);
+      background: var(--light);
+      border-radius: 0 10px 10px 0;
+      color: var(--primary);
+      font-family: "Playfair Display", Georgia, serif;
+      font-style: italic;
+    }
+
+    /* GALERIA SEPARADA */
+
+    .gallery-section {
+      background: var(--light);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .gallery-item {
+      position: relative;
+      height: 310px;
+      overflow: hidden;
+      border-radius: 18px;
+      border: 5px solid white;
+      padding: 0;
+      background: #D3E4F4;
+      box-shadow: 0 12px 30px rgba(52, 73, 94, 0.12);
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      inset: auto 0 0;
+      padding: 35px 18px 16px;
+      color: white;
+      font-weight: 600;
+      text-align: left;
+      background: linear-gradient(transparent, rgba(30, 48, 66, 0.85));
+    }
+
+    /* CARTA */
+
+    .letter-section {
+      background: white;
+    }
+
+    .letter-card {
+      position: relative;
+      max-width: 850px;
+      margin: auto;
+      padding: clamp(28px, 6vw, 65px);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: linear-gradient(140deg, #FFFFFF, #F3F8FD);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .letter-card::after {
+      content: "♡";
+      position: absolute;
+      right: 24px;
+      top: 4px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 6rem;
+      color: rgba(52, 73, 94, 0.07);
+      pointer-events: none;
+    }
+
+    .letter-top {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-bottom: 25px;
+    }
+
+    .letter-icon {
+      width: 49px;
+      height: 49px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background: var(--primary);
+      border-radius: 14px;
+      font-size: 1.35rem;
+    }
+
+    .letter-top span {
+      font-size: 0.77rem;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .letter-card h2 {
+      position: relative;
+      z-index: 1;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      line-height: 1.2;
+      margin-bottom: 27px;
+    }
+
+    .letter-card p {
+      position: relative;
+      z-index: 1;
+      color: #62758A;
+      margin-bottom: 19px;
+    }
+
+    .letter-card .greeting {
+      color: var(--primary);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.4rem;
+      font-style: italic;
+    }
+
+    .letter-signature {
+      color: var(--primary) !important;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.35rem;
+      font-style: italic;
+      margin-top: 28px;
+    }
+
+    /* FINAL */
+
+    .final-section {
+      padding: 110px 0;
+      color: white;
+      background: var(--primary);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final-section::before,
+    .final-section::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(228, 241, 254, 0.13);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .final-section::before {
+      width: 400px;
+      height: 400px;
+      top: -250px;
+      left: -120px;
+    }
+
+    .final-section::after {
+      width: 350px;
+      height: 350px;
+      bottom: -230px;
+      right: -100px;
+    }
+
+    .final-content {
+      position: relative;
+      z-index: 1;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .final-content .section-label {
+      background: rgba(228, 241, 254, 0.12);
+      color: white;
+      border: 1px solid rgba(228, 241, 254, 0.2);
+    }
+
+    .final-content .section-label::before {
+      background: white;
+    }
+
+    .final-content h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.7rem, 7vw, 4.8rem);
+      line-height: 1.15;
+      margin: 25px 0;
+    }
+
+    .final-content p {
+      color: #E4F1FE;
+      font-size: 1.03rem;
+    }
+
+    .final-heart {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 76px;
+      height: 76px;
+      margin: 30px auto 0;
+      color: var(--primary);
+      background: var(--light);
+      border-radius: 50%;
+      font-size: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      animation: heartbeat 2s infinite;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      10% { transform: scale(1.07); }
+      20% { transform: scale(1); }
+      30% { transform: scale(1.05); }
+      40% { transform: scale(1); }
+    }
+
+    /* FOOTER */
+
+    .footer {
+      padding: 38px 0;
+      background: #26394C;
+      color: #E4F1FE;
+      text-align: center;
+    }
+
+    .footer-brand {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.6rem;
+      margin-bottom: 5px;
+    }
+
+    .footer p {
+      font-size: 0.84rem;
+      color: #C6D9EC;
+      margin-top: 6px;
+    }
+
+    .footer-line {
+      width: 55px;
+      height: 2px;
+      background: #E4F1FE;
+      margin: 20px auto;
+      opacity: 0.6;
+    }
+
+    /* LIGHTBOX */
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+      background: rgba(24, 38, 53, 0.96);
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 92%;
+      max-height: 82vh;
+      width: auto;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 20px 70px rgba(0, 0, 0, 0.3);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 16px;
+      right: 25px;
+      width: 45px;
+      height: 45px;
+      color: white;
+      background: rgba(228, 241, 254, 0.12);
+      border: 1px solid rgba(228, 241, 254, 0.25);
+      border-radius: 12px;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    .lightbox-caption {
+      position: absolute;
+      bottom: 18px;
+      left: 15px;
+      right: 15px;
+      text-align: center;
+      color: #E4F1FE;
+      font-size: 0.9rem;
+    }
+
+    /* ANIMAÇÕES */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* RESPONSIVIDADE */
+
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 16px;
+      }
+
+      .nav-links a {
+        font-size: 0.8rem;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-decoration {
+        right: 3%;
+        opacity: 0.55;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .section {
+        padding: 75px 0;
+      }
+
+      .navbar {
+        min-height: 74px;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 74px;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 14px 5% 20px;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 15px 30px rgba(52, 73, 94, 0.1);
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 13px 5px;
+        font-size: 0.95rem;
+        border-bottom: 1px solid #EDF3F9;
+      }
+
+      .nav-links .nav-cta {
+        margin-top: 12px;
+        padding: 13px 16px;
+        text-align: center;
+        border: none;
+      }
+
+      .hero {
+        min-height: 670px;
+      }
+
+      .hero-content {
+        padding: 80px 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 12vw, 5rem);
+        letter-spacing: -1.5px;
+      }
+
+      .hero-description {
+        font-size: 0.98rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      .hero-decoration {
+        top: 5%;
+        right: -12%;
+        font-size: 9rem;
+      }
+
+      .counter-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .counter-item:last-child {
+        grid-column: 1 / -1;
+      }
+
+      .counter-card {
+        border-radius: 20px;
+      }
+
+      .timeline::before {
+        left: 22px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 46px minmax(0, 1fr);
+        gap: 13px;
+      }
+
+      .timeline-marker {
+        width: 46px;
+        height: 46px;
+        font-size: 1rem;
+        border-width: 4px;
+      }
+
+      .timeline-card {
+        padding: 22px 19px;
+      }
+
+      .timeline-card h3 {
+        font-size: 1.4rem;
+      }
+
+      .gallery-grid {
+        gap: 12px;
+      }
+
+      .gallery-item {
+        height: 220px;
+        border-width: 3px;
+        border-radius: 13px;
+      }
+
+      .gallery-caption {
+        padding: 25px 10px 10px;
+        font-size: 0.78rem;
+      }
+
+      .letter-card {
+        border-radius: 17px;
+      }
+
+      .final-section {
+        padding: 85px 0;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item {
+        height: 270px;
+      }
+
+      .counter-item {
+        padding: 17px 5px;
+      }
+
+      .hero-kicker {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVEGAÇÃO -->
+  <header class="header">
+    <div class="container navbar">
+
+      <a class="brand" href="#inicio">
+        <span class="brand-name">Reaveen & Yulla</span>
+        <span class="brand-subtitle">A nossa história</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >☰</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio">Início</a>
+        <a href="#historia">História</a>
+        <a href="#contador">Contador</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#carta" class="nav-cta">A minha carta ♡</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- CAPA PRINCIPAL -->
+    <section class="hero" id="inicio">
+      <div class="hero-decoration" aria-hidden="true">♡</div>
+
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="hero-kicker">
+            <span></span>
+            Uma história especial
+          </div>
+
+          <h1>
+            Reaveen<br>
+            <em>& Yulla Sheynilla</em>
+          </h1>
+
+          <p class="hero-description">
+            Seis meses de uma história que significa muito.
+            Um caminho feito de sentimentos, aprendizagem e vontade
+            de continuar a escrever novos capítulos juntos.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#historia" class="btn btn-primary">
+              Descobrir a nossa história <span>↗</span>
+            </a>
+
+            <a href="#carta" class="btn btn-secondary">
+              Uma mensagem para ti <span>♡</span>
+            </a>
+          </div>
+
+          <div class="hero-note">
+            <span>♡</span>
+            <p>Desde 27 de abril de 2026, uma história de nós.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRODUÇÃO -->
+    <section class="section intro">
+      <div class="container">
+        <div class="intro-inner reveal">
+
+          <div class="intro-mark">♡</div>
+
+          <div class="section-label">Para a minha pessoa especial</div>
+
+          <h2>
+            Há pessoas que tornam a vida mais bonita simplesmente por existirem.
+          </h2>
+
+          <p>
+            Yulla Sheynilla, este espaço é dedicado a nós.
+            Àquilo que estamos a construir, aos sentimentos que partilhamos
+            e aos momentos que ainda vamos viver. Seis meses são apenas
+            uma parte da nossa história, mas cada etapa merece ser valorizada.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTADOR -->
+    <section class="section counter-section" id="contador">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div class="section-label">O tempo que partilhamos</div>
+          <h2>O nosso tempo juntos</h2>
+          <p>
+            O calendário conta os dias. As memórias dão significado ao tempo.
+          </p>
+        </div>
+
+        <div class="counter-card reveal">
+          <div class="counter-card-inner">
+
+            <div class="counter-caption">A nossa caminhada</div>
+
+            <div class="counter-main">
+              <span class="counter-plus">+</span>
+              <span class="counter-number">6</span>
+              <span class="counter-months">meses</span>
+            </div>
+
+            <div class="counter-grid">
+
+              <div class="counter-item">
+                <strong id="weeks">0</strong>
+                <span>Semanas totais</span>
+              </div>
+
+              <div class="counter-item">
+                <strong id="days">0</strong>
+                <span>Dias totais</span>
+              </div>
+
+              <div class="counter-item">
+                <strong id="hours">0</strong>
+                <span>Horas totais</span>
+              </div>
+
+              <div class="counter-item">
+                <strong id="minutes">0</strong>
+                <span>Minutos totais</span>
+              </div>
+
+              <div class="counter-item">
+                <strong id="seconds">0</strong>
+                <span>Segundos totais</span>
+              </div>
+
+            </div>
+
+            <p class="counter-message">
+              Cada segundo é parte da nossa história. ♡
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HISTÓRIA SEM FOTOGRAFIAS -->
+    <section class="section story-section" id="historia">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div class="section-label">Capítulos da nossa caminhada</div>
+          <h2>A nossa história</h2>
+          <p>
+            Não precisamos de fotografias para contar o que sentimos.
+            Algumas histórias são escritas com palavras, escolhas e momentos.
+          </p>
+        </div>
+
+        <div class="timeline">
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker">01</div>
+
+            <div class="timeline-card">
+              <div class="timeline-date">Capítulo primeiro</div>
+              <h3>O Início</h3>
+
+              <p>
+                Toda história tem um começo. A nossa começou com a
+                oportunidade de conhecer alguém especial e descobrir,
+                aos poucos, que poderia nascer algo bonito entre nós.
+              </p>
+
+              <div class="timeline-quote">
+                "As coisas mais especiais começam, muitas vezes,
+                de uma forma simples."
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker">02</div>
+
+            <div class="timeline-card">
+              <div class="timeline-date">Capítulo segundo</div>
+              <h3>Primeiros Passos</h3>
+
+              <p>
+                Com o passar do tempo, cada conversa e cada momento
+                tornaram-se oportunidades para nos conhecermos melhor.
+                Uma relação cresce quando existe espaço para ouvir,
+                compreender e aprender um com o outro.
+              </p>
+
+              <div class="timeline-quote">
+                "Conhecer-te é continuar a descobrir algo novo."
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker">03</div>
+
+            <div class="timeline-card">
+              <div class="timeline-date">Capítulo terceiro</div>
+              <h3>Mais Conexão</h3>
+
+              <p>
+                Uma ligação torna-se especial quando os sentimentos
+                caminham com respeito, confiança e sinceridade.
+                Cada desafio também pode ensinar-nos a cuidar melhor
+                daquilo que estamos a construir.
+              </p>
+
+              <div class="timeline-quote">
+                "O importante não é sermos perfeitos, mas aprendermos juntos."
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker">04</div>
+
+            <div class="timeline-card">
+              <div class="timeline-date">Capítulo quarto · Seis meses</div>
+              <h3>O Nosso Presente</h3>
+
+              <p>
+                Hoje celebramos seis meses de caminho partilhado.
+                É uma oportunidade para agradecer pelo que vivemos,
+                valorizar o presente e continuar a escrever a nossa
+                história com maturidade, carinho e esperança.
+              </p>
+
+              <div class="timeline-quote">
+                "Este capítulo é nosso. Os próximos ainda estão por escrever."
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker">05</div>
+
+            <div class="timeline-card">
+              <div class="timeline-date">Capítulo por escrever</div>
+              <h3>O Que Ainda Vem</h3>
+
+              <p>
+                Ainda há conversas por ter, sonhos por partilhar,
+                aprendizagens por viver e novas memórias por criar.
+                Que o futuro nos encontre dispostos a cuidar do presente
+                e a construir o próximo capítulo com verdade.
+              </p>
+
+              <div class="timeline-quote">
+                "A nossa história continua..."
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    
+<!-- GALERIA: AS NOSSAS MEMÓRIAS -->
+<section class="section gallery-section" id="galeria">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <div class="section-label">As nossas memórias</div>
+      <h2>Cada fotografia, uma parte de nós</h2>
+      <p>
+        Cinco momentos, cinco capítulos e uma história que continua
+        a ser escrita por Reaveen e Yulla Sheynilla.
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <!-- 1. PRIMEIRA FOTO -->
+      <button
+        class="gallery-item"
+        data-image="imagens/foto1.jpg"
+        data-caption="Primeira Foto"
+        aria-label="Ver Primeira Foto"
+      >
+        <img
+          src="fird.jpeg"
+          alt="Primeira Foto de Reaveen e Yulla"
+          loading="lazy"
+        >
+        <span class="gallery-caption">
+          <small>CAPÍTULO 01</small>
+          <strong>Primeira Foto</strong>
+        </span>
+      </button>
+
+      <!-- 2. PRIMEIROS PASSOS -->
+      <button
+        class="gallery-item"
+        data-image="imagens/foto2.jpg"
+        data-caption="Primeiros Passos"
+        aria-label="Ver Primeiros Passos"
+      >
+        <img
+          src="primeiros passos.jpg"
+          alt="Primeiros Passos da nossa história"
+          loading="lazy"
+        >
+        <span class="gallery-caption">
+          <small>CAPÍTULO 02</small>
+          <strong>Primeiros Passos</strong>
+        </span>
+      </button>
+
+      <!-- 3. MAIS CONEXÃO -->
+      <button
+        class="gallery-item"
+        data-image="imagens/foto3.jpg"
+        data-caption="Mais Conexão"
+        aria-label="Ver Mais Conexão"
+      >
+        <img
+          src="mais conex.jpg"
+          alt="Mais Conexão entre Reaveen e Yulla"
+          loading="lazy"
+        >
+        <span class="gallery-caption">
+          <small>CAPÍTULO 03</small>
+          <strong>Mais Conexão</strong>
+        </span>
+      </button>
+
+      <!-- 4. O QUE ESTÁ POR VIR -->
+      <button
+        class="gallery-item"
+        data-image="imagens/foto4.jpg"
+        data-caption="O Que Está Por Vir"
+        aria-label="Ver O Que Está Por Vir"
+      >
+        <img
+          src="vir.jpg"
+          alt="O futuro da nossa história"
+          loading="lazy"
+        >
+        <span class="gallery-caption">
+          <small>CAPÍTULO 04</small>
+          <strong>O Que Está Por Vir</strong>
+        </span>
+      </button>
+
+      <!-- 5. MOMENTO ESPECIAL -->
+      <button
+        class="gallery-item"
+        data-image="imagens/foto5.jpg"
+        data-caption="Momento Especial"
+        aria-label="Ver Momento Especial"
+      >
+        <img
+          src="momentos ec.jpg"
+          alt="Um momento especial de Reaveen e Yulla"
+          loading="lazy"
+        >
+        <span class="gallery-caption">
+          <small>CAPÍTULO 05</small>
+          <strong>Momento Especial</strong>
+        </span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- CARTA -->
+    <section class="section letter-section" id="carta">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div class="section-label">Palavras do coração</div>
+          <h2>Uma carta para ti</h2>
+          <p>
+            Algumas palavras que quero dedicar à pessoa especial
+            que faz parte desta história.
+          </p>
+        </div>
+
+        <article class="letter-card reveal">
+
+          <div class="letter-top">
+            <div class="letter-icon">♡</div>
+            <span>Uma mensagem pessoal</span>
+          </div>
+
+          <h2>Minha Princesa,</h2>
+
+          <p class="greeting">Yulla Sheynilla,</p>
+
+          <p>
+            Hoje celebramos seis meses da nossa história, e quero aproveitar
+            este momento para te lembrar que a tua presença tem um lugar
+            especial na minha vida.
+          </p>
+
+          <p>
+            Ao longo deste caminho, existem momentos que nos fazem sorrir,
+            outros que nos ensinam e outros que nos ajudam a compreender
+            melhor o valor de uma relação. Quero valorizar cada oportunidade
+            de te conhecer melhor e de construir algo bonito contigo.
+          </p>
+
+          <p>
+            Não espero que tudo seja sempre perfeito. Espero, sim, que
+            possamos conversar com sinceridade, respeitar os nossos
+            sentimentos, aprender com os nossos erros e enfrentar os
+            desafios com maturidade.
+          </p>
+
+          <p>
+            Obrigado por fazeres parte desta caminhada. Que os próximos
+            capítulos nos tragam crescimento, cumplicidade, tranquilidade
+            e muitas razões para sorrir.
+          </p>
+
+          <p>
+            Feliz seis meses para nós, minha Princesa.
+            A nossa história ainda tem muito por escrever.
+          </p>
+
+          <p class="letter-signature">
+            Com carinho,<br>
+            Reaveen ♡
+          </p>
+
+        </article>
+      </div>
+    </section>
+
+    <!-- MENSAGEM FINAL -->
+    <section class="final-section">
+      <div class="container final-content reveal">
+
+        <div class="section-label">27 de abril · A nossa data</div>
+
+        <h2>
+          Seis meses vividos.<br>
+          Muitos capítulos por escrever.
+        </h2>
+
+        <p>
+          Que a nossa história continue a crescer com respeito,
+          sinceridade, compreensão e carinho. O melhor presente
+          é continuar a construir memórias que tenham significado.
+        </p>
+
+        <div class="final-heart">♡</div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-brand">Reaveen & Yulla</div>
+
+      <p>Uma história especial, contada à nossa maneira.</p>
+
+      <div class="footer-line"></div>
+
+      <p>Feito com carinho para Yulla Sheynilla ♡</p>
+
+      <p>© <span id="currentYear"></span> · Reaveen</p>
+
+    </div>
+  </footer>
+
+  <!-- VISUALIZADOR DE FOTOGRAFIAS -->
+  <div
+    class="lightbox"
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Visualizador de fotografias"
+  >
+    <button
+      class="lightbox-close"
+      id="lightboxClose"
+      aria-label="Fechar fotografia"
+    >&times;</button>
+
+    <img src="" alt="" id="lightboxImage">
+
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+
+  <script>
+    /* CONTADOR */
+
+    const dataInicio = new Date("2026-04-27T00:00:00");
+
+    function atualizarContadorAmor() {
+      const agora = new Date();
+
+      const diferenca = Math.max(
+        0,
+        agora.getTime() - dataInicio.getTime()
+      );
+
+      const segundo = 1000;
+      const minuto = 60 * segundo;
+      const hora = 60 * minuto;
+      const dia = 24 * hora;
+      const semana = 7 * dia;
+
+      const totais = {
+        weeks: Math.floor(diferenca / semana),
+        days: Math.floor(diferenca / dia),
+        hours: Math.floor(diferenca / hora),
+        minutes: Math.floor(diferenca / minuto),
+        seconds: Math.floor(diferenca / segundo)
+      };
+
+      for (const id in totais) {
+        document.getElementById(id).textContent =
+          totais[id].toLocaleString("pt-PT");
+      }
+    }
+
+    atualizarContadorAmor();
+    setInterval(atualizarContadorAmor, 1000);
+
+
+    /* MENU RESPONSIVO */
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+      const aberto = navLinks.classList.toggle("show");
+
+      menuToggle.setAttribute("aria-expanded", String(aberto));
+      menuToggle.textContent = aberto ? "×" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("show");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+
+    /* GALERIA AMPLIADA */
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxCaption = document.getElementById("lightboxCaption");
+    const lightboxClose = document.getElementById("lightboxClose");
+
+    function abrirFotografia(caminho, legenda) {
+      lightboxImage.src = caminho;
+      lightboxImage.alt = legenda;
+      lightboxCaption.textContent = legenda;
+      lightbox.classList.add("open");
+      document.body.style.overflow = "hidden";
+      lightboxClose.focus();
+    }
+
+    function fecharFotografia() {
+      lightbox.classList.remove("open");
+      document.body.style.overflow = "";
+      lightboxImage.src = "";
+    }
+
+    document.querySelectorAll(".gallery-item").forEach(function (botao) {
+      botao.addEventListener("click", function () {
+        abrirFotografia(
+          botao.dataset.image,
+          botao.dataset.caption
+        );
+      });
+    });
+
+    lightboxClose.addEventListener("click", fecharFotografia);
+
+    lightbox.addEventListener("click", function (evento) {
+      if (evento.target === lightbox) {
+        fecharFotografia();
+      }
+    });
+
+    document.addEventListener("keydown", function (evento) {
+      if (
+        evento.key === "Escape" &&
+        lightbox.classList.contains("open")
+      ) {
+        fecharFotografia();
+      }
+    });
+
+
+    /* ANO AUTOMÁTICO */
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+
+
+    /* ANIMAÇÕES AO FAZER SCROLL */
+
+    const elementosReveal = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observador = new IntersectionObserver(function (entradas) {
+        entradas.forEach(function (entrada) {
+          if (entrada.isIntersecting) {
+            entrada.target.classList.add("visible");
+            observador.unobserve(entrada.target);
+          }
+        });
+      }, {
+        threshold: 0.12
+      });
+
+      elementosReveal.forEach(function (elemento) {
+        observador.observe(elemento);
+      });
+    } else {
+      elementosReveal.forEach(function (elemento) {
+        elemento.classList.add("visible");
+      });
+    }
+  </script>
+
+</body>
+</html>
